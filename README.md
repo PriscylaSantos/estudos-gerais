@@ -6,6 +6,8 @@ Este repositório contém um Jupyter Book com materiais de estudo que utilizei e
 - Textos: Anotações, resumos e artigos sobre diversos tópicos.
 - Tutoriais: Passo a passo para aprender novas tecnologias e habilidades.
 
+Acesse em https://priscylasantos.github.io/estudos-gerais/intro.html
+
 ### Objetivo:
 Meu objetivo com este livro é compartilhar meus conhecimentos e experiências com outras pessoas que estão buscando aprender e crescer. Espero que este material seja útil para você em sua jornada de estudos.
 
