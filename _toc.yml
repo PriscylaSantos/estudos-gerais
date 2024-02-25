@@ -1,0 +1,18 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+# chapters:
+# - file: markdown
+# - file: notebooks
+# - file: markdown-notebooks
+
+chapters:
+- file: indice
+- file: materiais/index
+  sections:
+  - file: materiais/python/index
+    sections:
+    - file: materiais/python/tutorial_001.md
+  - file: materiais/django/index
