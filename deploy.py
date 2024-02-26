@@ -53,10 +53,11 @@ def run_command(command):
         print(output)
     except subprocess.CalledProcessError as e:
         print(f"Erro ao executar o comando {command}: {e.output}")
-        print('Deploy cancelado.')
-        return
+        print('----> Deploy cancelado.')
+        raise
 
 def main():
+    print('===== SCRIPT INICIADO =====')
     if len(sys.argv) < 2:
         print("Erro: Mensagem de commit não informada.")
         print("Uso: python automatizar_commits.py <mensagem_de_commit>")
@@ -64,7 +65,7 @@ def main():
     mensagem_commit = sys.argv[1]
 
     print('1 - Contruindo o livro com Jupyter Book')
-    run_command("jupyter-book buildk --all .")
+    run_command("jupyter-book build --all .")
     
     print('2- Adicionando todas as mudanças ao Git')
     run_command("git add ./*")
@@ -78,8 +79,8 @@ def main():
     print('5 - Publicando o livro com ghp-import no branch gh-pages')
     run_command("ghp-import -n -p -f _build/html")
 
-    print('Deploy finalizado.')
+    print('----> Deploy finalizado.')
 
 if __name__ == "__main__":
   main()
-  print('script finalizado')
+  print('===== SCRIPT FINALIZADO =====')
