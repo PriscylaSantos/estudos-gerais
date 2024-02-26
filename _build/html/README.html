@@ -173,18 +173,23 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Bem-vindo ao Meu Jupyter Book de Estudos
+                    Jupyter Book de Estudos
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="indice.html">Indice</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="materiais/index.html">Menu</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="materiais/python/index.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="materiais/banco_de_dados/index.html">Banco de Dados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materiais/django/index.html">Django</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="materiais/linux/index.html">Linux</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="materiais/linux/comandos_basicos.html">1 - Comandos básicos do Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="materiais/python/index.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="materiais/python/tutorial_001.html">tutorial_001.md</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="materiais/django/index.html">Django</a></li>
 </ul>
 </li>
 </ul>
@@ -359,7 +364,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -375,6 +382,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivo">Objetivo:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-usar">Como usar:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contribuicoes">Contribuições:</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -387,26 +404,35 @@ document.write(`
   <section id="jupyter-book-materiais-de-estudo">
 <h1>Jupyter Book - Materiais de Estudo<a class="headerlink" href="#jupyter-book-materiais-de-estudo" title="Link to this heading">#</a></h1>
 <p>Este repositório contém um Jupyter Book com materiais de estudo que utilizei em minha jornada de aprendizado. Aqui você encontrará:</p>
-<p>Códigos: Implementações de algoritmos, modelos e outras ferramentas computacionais.
-Textos: Anotações, resumos e artigos sobre diversos tópicos.
-Tutoriais: Passo a passo para aprender novas tecnologias e habilidades.
-Objetivo:</p>
+<ul class="simple">
+<li><p>Códigos: Implementações de algoritmos, modelos e outras ferramentas computacionais.</p></li>
+<li><p>Textos: Anotações, resumos e artigos sobre diversos tópicos.</p></li>
+<li><p>Tutoriais: Passo a passo para aprender novas tecnologias e habilidades.</p></li>
+</ul>
+<p>Acesse em https://priscylasantos.github.io/estudos-gerais/intro.html</p>
+<section id="objetivo">
+<h2>Objetivo:<a class="headerlink" href="#objetivo" title="Link to this heading">#</a></h2>
 <p>Meu objetivo com este livro é compartilhar meus conhecimentos e experiências com outras pessoas que estão buscando aprender e crescer. Espero que este material seja útil para você em sua jornada de estudos.</p>
-<p>Como usar:</p>
-<p>Clone o repositório:
-git clone https://github.com/PriscylaSantos/estudos-gerais.git
-Instale o Jupyter Book:
-pip install jupyter-book
-Execute o Jupyter Book:
-jupyter-book serve
-Acesse o livro no navegador:
-http://localhost:8888</p>
-<p>Contribuições:
-Este livro é um trabalho em andamento. Se você encontrar algum erro ou tiver alguma sugestão, por favor, sinta-se à vontade para abrir um issue no GitHub.</p>
+</section>
+<section id="como-usar">
+<h2>Como usar:<a class="headerlink" href="#como-usar" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Clone o repositório: git clone https://github.com/PriscylaSantos/estudos-gerais.git</p></li>
+<li><p>Instale o Jupyter Book: pip install jupyter-book</p></li>
+<li><p>Execute o Jupyter Book: jupyter-book serve</p></li>
+<li><p>Acesse o livro no navegador: http://localhost:8888</p></li>
+</ul>
+</section>
+<section id="contribuicoes">
+<h2>Contribuições:<a class="headerlink" href="#contribuicoes" title="Link to this heading">#</a></h2>
+<p>Este livro é um trabalho em andamento. Se você encontrar algum erro ou tiver alguma sugestão, por favor, sinta-se à vontade para abrir um issue no GitHub.</p>
 <hr class="docutils" />
 <p>Links úteis:</p>
-<p>Jupyter Book: https://jupyterbook.org/
-Markdown Guide: https://www.markdownguide.org/</p>
+<ul class="simple">
+<li><p>Jupyter Book: https://jupyterbook.org/</p></li>
+<li><p>Markdown Guide: https://www.markdownguide.org/</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -446,7 +472,22 @@ Markdown Guide: https://www.markdownguide.org/</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivo">Objetivo:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-usar">Como usar:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contribuicoes">Contribuições:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

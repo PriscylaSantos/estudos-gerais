@@ -1,0 +1,911 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1 - Comandos básicos do Linux &#8212; Meus materiais de estudo</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'materiais/linux/comandos_basicos';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python" href="../python/index.html" />
+    <link rel="prev" title="Linux" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Meus materiais de estudo - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Meus materiais de estudo - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Jupyter Book de Estudos
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../indice.html">Indice</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Menu</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../banco_de_dados/index.html">Banco de Dados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../django/index.html">Django</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Linux</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1 - Comandos básicos do Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../python/index.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/tutorial_001.html">tutorial_001.md</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/PriscylaSantos/estudos-gerais" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/PriscylaSantos/estudos-gerais/issues/new?title=Issue%20on%20page%20%2Fmateriais/linux/comandos_basicos.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/materiais/linux/comandos_basicos.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1 - Comandos básicos do Linux</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducao">Introdução:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navegacao-e-arquivos">Navegação e arquivos:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-ls">comando ls</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-cd">comando cd</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-pwd">comando pwd</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-mkdir">comando mkdir</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-rmdir">comando rmdir</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-rm">comando rm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-cp">comando cp</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-mv">comando mv</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informacoes-do-sistema">Informações do sistema:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gerenciamento-de-arquivos">Gerenciamento de arquivos:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rede">Rede:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permissoes">Permissões:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outros">Outros:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="comandos-basicos-do-linux">
+<h1>1 - Comandos básicos do Linux<a class="headerlink" href="#comandos-basicos-do-linux" title="Link to this heading">#</a></h1>
+<section id="introducao">
+<h2>Introdução:<a class="headerlink" href="#introducao" title="Link to this heading">#</a></h2>
+<p>Este guia apresenta os comandos básicos do Linux para navegação em arquivos, informações do sistema, gerenciamento de arquivos, rede e outros utilitários.</p>
+</section>
+<section id="navegacao-e-arquivos">
+<h2>Navegação e arquivos:<a class="headerlink" href="#navegacao-e-arquivos" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code>: <a class="reference internal" href="#comando-ls"><span class="xref myst">Lista todos os arquivos e pastas do diretório atual.</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code>: <a class="reference internal" href="#comando-cd"><span class="xref myst">Muda para o diretório especificado.</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code>: <a class="reference internal" href="#comando-pwd"><span class="xref myst">Mostra o diretório atual.</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mkdir</span></code>: <a class="reference internal" href="#comando-mkdir"><span class="xref myst">Cria um novo diretório.</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rmdir</span></code>: <a class="reference internal" href="#comando-rmdir"><span class="xref myst">Remove um diretório vazio.</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span></code>: <a class="reference internal" href="#comando-rm"><span class="xref myst">Remove um arquivo.</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span></code>: <a class="reference internal" href="#comando-cp"><span class="xref myst">Faz cópia de um arquivo.</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span></code>: <a class="reference internal" href="#comando-mv"><span class="xref myst">Move um arquivo ou renomeia-o</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">file</span></code>: Cria um novo arquivo vazio “file” ou atualiza a data de modificação de um arquivo existente.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">file</span></code>: Mostra o conteúdo de um arquivo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">&gt;&gt;</span> <span class="pre">file</span></code>: Concatena a entrada padrão com o conteúdo de um arquivo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tail</span> <span class="pre">-f</span> <span class="pre">file</span></code>: Mostra o conteúdo de um arquivo à medida que ele é modificado.</p></li>
+</ul>
+<section id="comando-ls">
+<h3>comando ls<a class="headerlink" href="#comando-ls" title="Link to this heading">#</a></h3>
+<details>
+<p>O comando <code class="docutils literal notranslate"><span class="pre">ls</span></code> significa <code class="docutils literal notranslate"><span class="pre">list</span></code> em inglês e é usado para listar arquivos e diretórios. É um dos comandos mais básicos e usados com frequência na linha de comando.</p>
+<p><strong>Função do comando ls:</strong></p>
+<ul class="simple">
+<li><p><strong>Listar os nomes de arquivos e diretórios</strong> em um determinado diretório.</p></li>
+<li><p>Mostrar informações adicionais sobre os arquivos, como tipo, tamanho, data de modificação e permissões.</p></li>
+<li><p>Ordenar os resultados por nome, tamanho, data ou outros critérios.</p></li>
+<li><p>Filtrar os resultados por nome, tipo, data ou outros critérios.</p></li>
+</ul>
+<p><strong>Opções do comando ls:</strong>
+O comando ls possui diversas opções que podem ser usadas para personalizar a saída do comando. Algumas das opções mais comuns são:</p>
+<ul class="simple">
+<li><p><strong>-a:</strong> <code class="docutils literal notranslate"><span class="pre">all(todos)</span></code>. Lista todos os arquivos, incluindo arquivos ocultos.</p></li>
+<li><p><strong>-l:</strong> <code class="docutils literal notranslate"><span class="pre">long</span> <span class="pre">listing</span> <span class="pre">format(formato</span> <span class="pre">de</span> <span class="pre">listagem</span> <span class="pre">longa)</span></code>. Lista os arquivos e diretórios com detalhes extensivos, incluindo permissões, número de links, proprietário, grupo, tamanho, data de última modificação e nome</p></li>
+<li><p><strong>-r:</strong> <code class="docutils literal notranslate"><span class="pre">reverse(reverso)</span></code>. Ordena os resultados em ordem inversa.</p></li>
+<li><p><strong>-t:</strong> <code class="docutils literal notranslate"><span class="pre">time(tempo)</span></code>. Ordena os arquivos pela data de modificação, com os mais recentes primeiro.</p></li>
+<li><p><strong>-h:</strong> <code class="docutils literal notranslate"><span class="pre">human-readable(legível</span> <span class="pre">para</span> <span class="pre">humanos)</span></code>. Mostra o tamanho dos arquivos em um formato mais legível.</p></li>
+</ul>
+<p><strong>Exemplos de uso do comando ls:</strong></p>
+<ul class="simple">
+<li><p><strong>Listar o conteúdo do diretório atual:</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Listar o conteúdo do diretório “/home/user”:</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Listar os arquivos com a extensão “.txt”:</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">*.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Listar os arquivos em ordem decrescente de tamanho:</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">lS</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Mostrar informações detalhadas sobre um arquivo:</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">arquivo</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p><strong>Para mais informações sobre o comando ls, consulte a página de manual do comando via terminal:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">ls</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="comando-cd">
+<h3>comando cd<a class="headerlink" href="#comando-cd" title="Link to this heading">#</a></h3>
+<details>
+<p>O comando <code class="docutils literal notranslate"><span class="pre">cd</span></code> significa <code class="docutils literal notranslate"><span class="pre">change</span> <span class="pre">directory</span> <span class="pre">(mudar</span> <span class="pre">diretório)</span></code> e é usado para navegar pelos diretórios do sistema operacional. É um dos comandos mais básicos e usados com frequência na linha de comando.</p>
+<p><strong>Função do comando cd:</strong></p>
+<ul class="simple">
+<li><p><strong>Mudar o diretório atual</strong> para o diretório especificado.</p></li>
+<li><p><strong>Listar os arquivos e diretórios</strong> do diretório atual.</p></li>
+<li><p><strong>Navegar para um diretório superior</strong> usando o comando “cd ..”.</p></li>
+</ul>
+<p><strong>Opções do comando cd:</strong>
+O comando cd possui algumas opções que podem ser usadas para personalizar seu uso. Algumas das opções mais comuns são:</p>
+<ul class="simple">
+<li><p><strong>-L:</strong> <code class="docutils literal notranslate"><span class="pre">logical(lógico)</span></code>. Se o diretório especificado for um link simbólico, muda para o diretório que o link aponta.</p></li>
+<li><p><strong>-P:</strong> <code class="docutils literal notranslate"><span class="pre">physical(físico)</span></code>. Se o diretório especificado for um link simbólico, muda para o diretório pai do link.</p></li>
+<li><p><strong>-V:</strong> <code class="docutils literal notranslate"><span class="pre">verbose(detalhado)</span></code>. Mostra informações detalhadas sobre o processo de mudança de diretório.</p></li>
+</ul>
+<p><strong>Exemplos de uso do comando cd:</strong></p>
+<ul class="simple">
+<li><p><strong>Mudar para o diretório “/home/usuario”:</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">usuario</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Listar o conteúdo do diretório atual:</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Navegar para o diretório superior:</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
+</pre></div>
+</div>
+<p><strong>Para mais informações sobre o comando cd, consulte a página de manual do comando via terminal:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">cd</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="comando-pwd">
+<h3>comando pwd<a class="headerlink" href="#comando-pwd" title="Link to this heading">#</a></h3>
+<details>
+<p>O comando <code class="docutils literal notranslate"><span class="pre">pwd</span></code> significa <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">working</span> <span class="pre">directory</span></code> e é usado para mostrar o caminho completo do diretório no qual você está trabalhando.</p>
+<p><strong>Função do comando pwd:</strong></p>
+<ul class="simple">
+<li><p><strong>Não modifica nada no sistema.</strong> Ele apenas <strong>recupera e mostra o caminho absoluto</strong> do diretório no qual você está navegando.</p></li>
+<li><p><strong>Benefícios:</strong> Saber a localização exata ajuda você a entender sua posição atual na estrutura de diretórios e navegar de forma eficiente usando outros comandos como <code class="docutils literal notranslate"><span class="pre">cd</span></code> (mudar diretório).</p></li>
+<li><p><strong>Uso:</strong> Basta digitar <code class="docutils literal notranslate"><span class="pre">pwd</span></code> no terminal e pressionar Enter. Ele imprimirá o caminho completo do diretório atual na próxima linha.</p></li>
+</ul>
+<p><strong>Exemplo:</strong>
+Se você estiver no diretório <code class="docutils literal notranslate"><span class="pre">/home/user/documentos</span></code>, digitar <code class="docutils literal notranslate"><span class="pre">pwd</span></code> e pressionar Enter mostrará:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">documentos</span>
+</pre></div>
+</div>
+<p><strong>Pontos adicionais:</strong></p>
+<ul class="simple">
+<li><p>“pwd” é um <strong>comando autônomo</strong> e não requer argumentos.</p></li>
+<li><p>É um comando <strong>frequentemente usado</strong>, especialmente para iniciantes que estão aprendendo a navegar na linha de comando.</p></li>
+</ul>
+<p><strong>Para mais informações sobre o comando pwd, consulte a página de manual do comando via terminal:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">pwd</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="comando-mkdir">
+<h3>comando mkdir<a class="headerlink" href="#comando-mkdir" title="Link to this heading">#</a></h3>
+<details>
+<p>O comando <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> significa  <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">directory</span> <span class="pre">(criar</span> <span class="pre">diretório)</span></code>. É usado para criar novos diretórios (pastas) no sistema de arquivos.</p>
+<p><strong>Função do comando mkdir:</strong></p>
+<ul class="simple">
+<li><p><strong>Cria um novo diretório:</strong> Você especifica o nome e o local do diretório que deseja criar.</p></li>
+<li><p><strong>Organiza arquivos:</strong> Diretórios ajudam a organizar seus arquivos, agrupando-os por tipo, projeto ou qualquer outra categoria que seja útil para você.</p></li>
+<li><p><strong>Funciona em diferentes locais:</strong> Você pode criar diretórios no diretório atual, em subdiretórios existentes ou em qualquer outro local no sistema de arquivos, desde que tenha permissão para gravar naquele local.</p></li>
+</ul>
+<p><strong>Exemplo:</strong>
+Para criar um diretório chamado “Documentos” no diretório atual, você digitaria:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">Documentos</span>
+</pre></div>
+</div>
+<p><strong>Observações:</strong></p>
+<ul class="simple">
+<li><p>Você precisa ter permissão de gravação no local onde deseja criar o diretório.</p></li>
+<li><p>O nome do diretório deve seguir as regras do sistema de arquivos, como não conter caracteres especiais restritos.</p></li>
+<li><p>O comando <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> é um dos comandos básicos e mais usados para gerenciar arquivos e diretórios na linha de comando.</p></li>
+</ul>
+<p><strong>Para mais informações sobre o comando mkdir, consulte a página de manual do comando via terminal:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">mkdir</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="comando-rmdir">
+<h3>comando rmdir<a class="headerlink" href="#comando-rmdir" title="Link to this heading">#</a></h3>
+<details>
+<p>O comando <code class="docutils literal notranslate"><span class="pre">rmdir</span></code> significa <code class="docutils literal notranslate"><span class="pre">remove</span> <span class="pre">directory(remover</span> <span class="pre">diretório)</span></code>. É utilizado para apagar diretórios vazios do sistema de arquivos.</p>
+<p><strong>Função do comando rmdir:</strong></p>
+<ul class="simple">
+<li><p><strong>Remove diretórios vazios:</strong> Ele somente pode remover diretórios que não contenham nenhum arquivo ou subdiretório dentro deles.</p></li>
+<li><p><strong>Organiza o sistema de arquivos:</strong> Ao remover diretórios desnecessários, você mantém seu sistema de arquivos organizado e evita o acúmulo de pastas vazias.</p></li>
+<li><p><strong>Funciona em diferentes locais:</strong> Você pode remover diretórios no diretório atual, em subdiretórios existentes ou em qualquer outro local no sistema de arquivos, desde que tenha permissão para gravar naquele local.</p></li>
+</ul>
+<p><strong>Exemplo:</strong>
+Para remover um diretório chamado “Temporários” no diretório atual, você digitaria:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rmdir</span> <span class="n">Temporários</span>
+</pre></div>
+</div>
+<p><strong>Observações importantes:</strong></p>
+<ul class="simple">
+<li><p><strong>Nunca use o <code class="docutils literal notranslate"><span class="pre">rmdir</span></code> com a opção para remover diretórios não vazios, pois isso pode levar à perda permanente de dados.</strong></p></li>
+<li><p>Certifique-se sempre de que o diretório esteja realmente vazio antes de tentar removê-lo.</p></li>
+<li><p>Você precisa ter permissão de gravação no diretório que deseja remover.</p></li>
+<li><p>O nome do diretório deve seguir as regras do sistema de arquivos.</p></li>
+</ul>
+<p><strong>Recomendação:</strong></p>
+<p>Antes de remover qualquer diretório, é sempre aconselhável verificar se ele está realmente vazio e se você tem certeza de que não precisa mais dele. Se houver arquivos importantes dentro do diretório, é crucial fazer um backup antes de prosseguir com a remoção.</p>
+<p><strong>Para mais informações sobre o comando rmdir, consulte a página de manual do comando via terminal:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">rmdir</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="comando-rm">
+<h3>comando rm<a class="headerlink" href="#comando-rm" title="Link to this heading">#</a></h3>
+<details>
+<p>O comando <code class="docutils literal notranslate"><span class="pre">rm</span></code> significa <code class="docutils literal notranslate"><span class="pre">remove(remover)</span></code>. É usado para apagar arquivos do sistema de arquivos.</p>
+<p><strong>Função do comando rm:</strong></p>
+<ul class="simple">
+<li><p><strong>Remove arquivos:</strong> Permite eliminar arquivos específicos do seu sistema.</p></li>
+<li><p><strong>Libera espaço em disco:</strong> Ao remover arquivos desnecessários, você libera espaço de armazenamento no seu computador.</p></li>
+<li><p><strong>Funciona em diferentes locais:</strong> Você pode apagar arquivos no diretório atual, em subdiretórios existentes ou em qualquer outro local no sistema de arquivos, desde que tenha permissão para gravar naquele local.</p></li>
+</ul>
+<p><strong>Opções do comando rm:</strong>
+O comando rm possui algumas opções que podem ser usadas para personalizar seu uso. Algumas das opções mais comuns são:</p>
+<ul class="simple">
+<li><p><strong>-f:</strong> <code class="docutils literal notranslate"><span class="pre">force(forçar)</span></code>. Remove o arquivo sem pedir confirmação, mesmo se o arquivo estiver protegido contra escrita..</p></li>
+<li><p><strong>-r:</strong> <code class="docutils literal notranslate"><span class="pre">recursive(recursivo)</span></code>. Remove o diretório e todo o seu conteúdo recursivamente</p></li>
+</ul>
+<p><strong>Exemplos:</strong></p>
+<p>Para remover um arquivo chamado “foto.jpg” no diretório atual, você digitaria:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="n">foto</span><span class="o">.</span><span class="n">jpg</span>
+</pre></div>
+</div>
+<p>Para remover todos os arquivos .txt no diretório atual, você digitaria:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="o">*.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p><strong>Observações importantes:</strong></p>
+<ul class="simple">
+<li><p><strong>Use o comando <code class="docutils literal notranslate"><span class="pre">rm</span></code> com cuidado, pois ele pode apagar arquivos permanentemente.</strong></p></li>
+<li><p><strong>Sempre faça backup de arquivos importantes antes de removê-los.</strong></p></li>
+<li><p>O comando <code class="docutils literal notranslate"><span class="pre">rm</span></code> não remove diretórios vazios. Utilize o comando <code class="docutils literal notranslate"><span class="pre">rmdir</span></code> para essa finalidade.</p></li>
+<li><p>Tenha cuidado ao usar opções como <code class="docutils literal notranslate"><span class="pre">-r</span></code> (remover recursivamente) e <code class="docutils literal notranslate"><span class="pre">-f</span></code> (forçar remoção sem confirmação), pois elas podem levar à perda acidental de dados.</p></li>
+</ul>
+<p><strong>Para mais informações sobre o comando rm, consulte a página de manual do comando via terminal:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">rm</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="comando-cp">
+<h3>comando cp<a class="headerlink" href="#comando-cp" title="Link to this heading">#</a></h3>
+<details>
+<p>O comando <code class="docutils literal notranslate"><span class="pre">cp</span></code> significa <code class="docutils literal notranslate"><span class="pre">copy(copia)</span></code>. É usado para copiar arquivos de um local para outro no sistema de arquivos.</p>
+<p><strong>Função do comando cp:</strong></p>
+<ul class="simple">
+<li><p><strong>Copia arquivos:</strong> Permite duplicar arquivos existentes em diferentes locais do seu computador.</p></li>
+<li><p><strong>Cria backups:</strong> Uma das principais utilidades do <code class="docutils literal notranslate"><span class="pre">cp</span></code> é criar backups de arquivos importantes.</p></li>
+<li><p><strong>Organiza arquivos:</strong> Você pode usar o <code class="docutils literal notranslate"><span class="pre">cp</span></code> para organizar seus arquivos, copiando-os para pastas específicas.</p></li>
+</ul>
+<p><strong>Como usar o <code class="docutils literal notranslate"><span class="pre">cp</span></code>:</strong></p>
+<p>A sintaxe básica do comando <code class="docutils literal notranslate"><span class="pre">cp</span></code> é:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="p">[</span><span class="n">opções</span><span class="p">]</span> <span class="n">arquivo_origem</span> <span class="n">arquivo_destino</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>opções:</strong> São opcionais e permitem especificar comportamentos específicos do comando, como copiar recursivamente dentro de diretórios, preservar permissões e atributos dos arquivos, etc.</p></li>
+<li><p><strong>arquivo_origem:</strong> É o nome do arquivo que você deseja copiar.</p></li>
+<li><p><strong>arquivo_destino:</strong> É o nome e local do arquivo copiado.</p></li>
+</ul>
+<p><strong>Exemplos:</strong></p>
+<p>Para copiar um arquivo chamado “foto.jpg” para o diretório “Imagens”, você digitaria:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">foto</span><span class="o">.</span><span class="n">jpg</span> <span class="n">Imagens</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Para copiar todos os arquivos .txt do diretório atual para o diretório “Documentos”, você digitaria:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">*.</span><span class="n">txt</span> <span class="n">Documentos</span><span class="o">/</span>
+</pre></div>
+</div>
+<p><strong>Observações importantes:</strong></p>
+<ul class="simple">
+<li><p>O comando <code class="docutils literal notranslate"><span class="pre">cp</span></code> não sobrescreve arquivos existentes por padrão. Se o arquivo de destino já existir, você será questionado se deseja sobrescrevê-lo.</p></li>
+<li><p>Use a opção <code class="docutils literal notranslate"><span class="pre">-f</span></code> para forçar a sobrescrição do arquivo de destino.</p></li>
+<li><p>Tenha cuidado ao usar opções como <code class="docutils literal notranslate"><span class="pre">-r</span></code> (copiar recursivamente) e <code class="docutils literal notranslate"><span class="pre">-f</span></code> (forçar sobrescrição), pois elas podem levar à perda acidental de dados.</p></li>
+</ul>
+<p><strong>Recomendação:</strong></p>
+<p>Sempre que possível, utilize o comando <code class="docutils literal notranslate"><span class="pre">rsync</span></code> ao invés de <code class="docutils literal notranslate"><span class="pre">cp</span></code> para copiar arquivos grandes ou diretórios. O <code class="docutils literal notranslate"><span class="pre">rsync</span></code> é mais eficiente e oferece recursos adicionais como sincronização de arquivos e pastas.</p>
+<p><strong>Dicas adicionais:</strong></p>
+<ul class="simple">
+<li><p>Você pode usar o comando <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">cp</span></code> para obter mais informações sobre o comando <code class="docutils literal notranslate"><span class="pre">cp</span></code> e suas opções.</p></li>
+<li><p>Você pode usar o atalho <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> para cancelar a execução do comando <code class="docutils literal notranslate"><span class="pre">cp</span></code> a qualquer momento.</p></li>
+<li><p>Utilize a opção <code class="docutils literal notranslate"><span class="pre">-v</span></code> para ver o progresso da copiação do arquivo.</p></li>
+</ul>
+<p>Espero que esta resposta tenha sido útil! Se você tiver mais perguntas sobre o comando <code class="docutils literal notranslate"><span class="pre">cp</span></code> ou como usá-lo, fique à vontade para perguntar.</p>
+<p><strong>Para mais informações sobre o comando cp, consulte a página de manual do comando via terminal:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">cp</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="comando-mv">
+<h3>comando mv<a class="headerlink" href="#comando-mv" title="Link to this heading">#</a></h3>
+<details>
+<p><strong>Para mais informações sobre o comando mv, consulte a página de manual do comando via terminal:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">mv</span>
+</pre></div>
+</div>
+</details>
+</section>
+</section>
+<section id="informacoes-do-sistema">
+<h2>Informações do sistema:<a class="headerlink" href="#informacoes-do-sistema" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code>: Mostra a data e hora atual.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uptime</span></code>: Mostra o tempo que o sistema está ativo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whoami</span></code>: Mostra o nome do usuário atual.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">w</span></code>: Mostra os usuários que estão conectados no momento.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">/proc/cpuinfo</span></code>: Mostra informações sobre a CPU.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">/proc/meminfo</span></code>: Mostra informações sobre a memória.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">free</span></code>: Mostra a memória livre e usada.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">du</span></code>: Mostra o uso do espaço em disco.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df</span></code>: Mostra o espaço livre em disco em cada partição.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uname</span> <span class="pre">-a</span></code>: Mostra informações sobre o kernel.</p></li>
+</ul>
+</section>
+<section id="gerenciamento-de-arquivos">
+<h2>Gerenciamento de arquivos:<a class="headerlink" href="#gerenciamento-de-arquivos" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">cf</span> <span class="pre">file.tar</span> <span class="pre">files</span></code>: Cria um arquivo tar “file.tar” com os arquivos especificados.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">xf</span> <span class="pre">file.tar</span></code>: Extrai o conteúdo do arquivo tar “file.tar” no diretório atual.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">tf</span> <span class="pre">file.tar</span></code>: Mostra o conteúdo do arquivo tar “file.tar”.</p></li>
+</ul>
+</section>
+<section id="rede">
+<h2>Rede:<a class="headerlink" href="#rede" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">host</span></code>: Envia pacotes ping para o host especificado.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whois</span> <span class="pre">domain</span></code>: Mostra informações sobre o domínio especificado.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dig</span> <span class="pre">domain</span></code>: Mostra informações de DNS para o domínio especificado.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">file</span></code>: Baixa o arquivo especificado da internet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">url</span></code>: Mostra o conteúdo da página web especificada.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">user&#64;host</span></code>: Conecta-se ao host especificado como o usuário especificado.</p></li>
+</ul>
+</section>
+<section id="permissoes">
+<h2>Permissões:<a class="headerlink" href="#permissoes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">octal</span> <span class="pre">file</span></code>: Altera as permissões do arquivo especificado.</p></li>
+</ul>
+</section>
+<section id="outros">
+<h2>Outros:<a class="headerlink" href="#outros" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ps</span></code>: Mostra os processos em execução.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ps</span> <span class="pre">aux</span></code>: Mostra os processos em execução com mais detalhes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kill</span> <span class="pre">pid</span></code>: Mata o processo com o ID especificado.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">killall</span> <span class="pre">proc</span></code>: Mata todos os processos com o nome especificado.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">pattern</span> <span class="pre">files</span></code>: Procura o padrão especificado nos arquivos especificados.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">-r</span> <span class="pre">pattern</span> <span class="pre">dir</span></code>: Procura o padrão especificado recursivamente no diretório especificado.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locate</span> <span class="pre">file</span></code>: Procura o arquivo especificado no sistema.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whereis</span> <span class="pre">app</span></code>: Mostra os locais possíveis do aplicativo especificado.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">command</span></code>: Mostra a página de manual do comando especificado.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./materiais/linux"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Linux</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../python/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducao">Introdução:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navegacao-e-arquivos">Navegação e arquivos:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-ls">comando ls</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-cd">comando cd</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-pwd">comando pwd</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-mkdir">comando mkdir</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-rmdir">comando rmdir</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-rm">comando rm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-cp">comando cp</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-mv">comando mv</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informacoes-do-sistema">Informações do sistema:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gerenciamento-de-arquivos">Gerenciamento de arquivos:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rede">Rede:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permissoes">Permissões:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outros">Outros:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Priscyla C. dos Santos
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

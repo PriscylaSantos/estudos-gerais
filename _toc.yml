@@ -12,7 +12,12 @@ chapters:
 - file: indice
 - file: materiais/index
   sections:
+  - file: materiais/banco_de_dados/index
+  - file: materiais/django/index
+  - file: materiais/linux/index
+    sections:
+    - file: materiais/linux/comandos_basicos
   - file: materiais/python/index
     sections:
     - file: materiais/python/tutorial_001.md
-  - file: materiais/django/index
+
