@@ -54,6 +54,7 @@ def run_command(command):
     except subprocess.CalledProcessError as e:
         print(f"Erro ao executar o comando {command}: {e.output}")
         print('Deploy cancelado.')
+        return
 
 def main():
     if len(sys.argv) < 2:
