@@ -9,7 +9,7 @@
 - **LinkedIn:** [@priscylacsantos](http://linkedin.com/in/priscylacsantos)
 - **GitHub:** [@PriscylaSantos](http://github.com/PriscylaSantos)
 
-`Objetivo`: Atuar como desenvolvedora backend (remoto) com foco nas linguagens Python e/ou PHP
+**Objetivo**: Atuar como desenvolvedora backend (remoto) com foco nas linguagens Python e/ou PHP
 
 
 #### `RESUMO PROFISSIONAL`
@@ -24,6 +24,8 @@ Profissional de Ciência da Computação com mais de 11 anos de experiência em 
 
 
 #### `EXPERIÊNCIA PROFISSIONAL`
+
+<details>
 
 ###### **studioApp**: Analista de Sistemas Pleno
 > Desenvolvedora back-end: 05/2017 - 12/2024
@@ -87,8 +89,12 @@ Bolsista do Laboratório de Multimídia Interativa do IF Sudeste MG - campus Rio
     - Gamification for Professionals in the Development Area of Electronic Games(2012)
     - Mathematics Teaching Based on a New Pedagogical Tool for M-Learning(2012).
 
+</details>
+
 
 #### `COMPETÊNCIAS E HABILIDADES`
+
+<details>
 
 | Habilidade/Competência     | Descrição                                                                                           |
 |----------------------------|-----------------------------------------------------------------------------------------------------|
@@ -104,8 +110,11 @@ Bolsista do Laboratório de Multimídia Interativa do IF Sudeste MG - campus Rio
 | Aprendizagem Contínua      | Interesse em aprender novas tecnologias e manter-se atualizado com as últimas tendências do mercado.|
 | Cloud                      | AWS.                                                                                                |
 
+</details>
 
 #### `REGISTRO DE PROGRAMA DE COMPUTADOR`
+
+<details>
 
 ###### SAAC - Sistema de Administração Acadêmica
 > Registro: BR 51 2016 000774-5. Acesse a patente [aqui](https://drive.google.com/file/d/1NbX6SACMFL_G0ML0YXPLj82LZ3SVrvcB/view?usp=sharing).
@@ -130,8 +139,11 @@ Sistema em questão permite controlar todos os passos da mercadoria durante sua 
 
 Permite o controle total dos procedimentos realizados para solicitação e liberação das viagens técnicas realizadas no campus Rio Pomba.
 
+</details>
 
 #### `PUBLICAÇÕES`
+
+<details>
 
 ###### Plataforma para análise, simulação e otimização do cálculo do Fator de disponibilidade de usinas hidrelétricas participantes do MRE: 2022
 > XV Simpósio de Especialistas em Planejamento da Operação e Expansão de Sistemas de Energia Elétrica - [Acesse o artigo aqui](https://drive.google.com/file/d/1uebXyfyUnWXKXYuDLgDUzxth9IN8v9YZ/view?usp=sharing)
@@ -181,4 +193,4 @@ Artigo desenvolvido no LAMIF e publicado como Artigo completo no 22º Simpósio 
 **Resumo:** 
 É um consenso entre os professores que jogos educativos podem estimular o interesse dos alunos e representar um ganho no processo ensino-aprendizagem. Este artigo demonstra um inovador ambiente colaborativo centrado em um jogo 3D denominado “Kinble”. Em sua arquitetura destaca-se um módulo de cadastro de questões, onde um professor de qualquer disciplina de nível médio pode alimentá-lo e compartilhar informações com outros professores. Além de um jogo 3D de ação (com a mecânica plataforma) no qual o aluno, em um ambiente competitivo, é estimulado a responder as questões para conseguir uma melhor posição no ranking de pontuação.
 
-
+</details>
