@@ -1,4 +1,4 @@
-## Jupyter Book de Estudos
+## Sobre
 
 Este livro foi criado para ser um repositório de materiais de estudo que utilizei durante minha jornada de aprendizado. Aqui você encontrará:
 
