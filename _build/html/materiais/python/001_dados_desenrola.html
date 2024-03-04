@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Banco de Dados &#8212; Meus materiais de estudo</title>
+    <title>Uma análise dos dados do Desenrola Brasil &#8212; Meus materiais de estudo</title>
   
   
   
@@ -57,12 +57,11 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'materiais/banco_de_dados/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'materiais/python/001_dados_desenrola';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Django" href="../django/index.html" />
-    <link rel="prev" title="Materiais" href="../index.html" />
+    <link rel="prev" title="Python" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,7 +179,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../intro.html">Sobre</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Materiais</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Banco de Dados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../banco_de_dados/index.html">Banco de Dados</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../django/index.html">Django</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../django/001_serializers.html">Serializers no Django Rest Framework</a></li>
 </ul>
@@ -189,8 +188,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../linux/comandos_basicos.html">1 - Comandos básicos do Linux</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../python/index.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../python/001_dados_desenrola.html">Uma análise dos dados do Desenrola Brasil</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Uma análise dos dados do Desenrola Brasil</a></li>
 </ul>
 </li>
 </ul>
@@ -266,7 +265,7 @@
       
       
       
-      <li><a href="https://github.com/PriscylaSantos/estudos-gerais/issues/new?title=Issue%20on%20page%20%2Fmateriais/banco_de_dados/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/PriscylaSantos/estudos-gerais/issues/new?title=Issue%20on%20page%20%2Fmateriais/python/001_dados_desenrola.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +295,7 @@
       
       
       
-      <li><a href="../../_sources/materiais/banco_de_dados/index.md" target="_blank"
+      <li><a href="../../_sources/materiais/python/001_dados_desenrola.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -306,7 +305,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -378,7 +377,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Banco de Dados</h1>
+    <h1>Uma análise dos dados do Desenrola Brasil</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -392,8 +391,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="banco-de-dados">
-<h1>Banco de Dados<a class="headerlink" href="#banco-de-dados" title="Link to this heading">#</a></h1>
+  <section id="uma-analise-dos-dados-do-desenrola-brasil">
+<h1>Uma análise dos dados do Desenrola Brasil<a class="headerlink" href="#uma-analise-dos-dados-do-desenrola-brasil" title="Link to this heading">#</a></h1>
+<p>Mensalmente, o Banco Central do Brasil (BCB) disponibiliza, através de um arquivo no formato CSV, um compilado de informações sobre transações de crédito reportadas ao Sistema de Informações de Créditos (SCR). Essas informações são específicas para transações associadas ao Programa Emergencial de Renegociação de Dívidas para Pessoas Físicas com Atrasos no Pagamento - Desenrola Brasil, criado pela Lei Nº 14.690, de 3 de outubro de 2023.</p>
+<p>A publicação é limitada às transações marcadas no SCR como parte do programa Desenrola Brasil e inclui detalhes como o número de transações de crédito oriundas de renegociações e os montantes dessas transações após aplicação de descontos. Estes dados são apresentados separadamente por credor, estado e categoria do programa.</p>
+<p>Para cada mês de referência, as informações divulgadas correspondem às transações renegociadas naquele período. Excepcionalmente para o mês base de setembro de 2023, as informações abrangem transações renegociadas tanto em setembro quanto em meses anteriores.</p>
+<p>O arquivo CSV é atualizado no último dia útil de cada mês, trazendo dados até o último mês de referência. Você pode baixar o arquivo <a class="reference external" href="https://dadosabertos.bcb.gov.br/dataset/desenrola-brasil">aqui</a>.</p>
+<p>Com base nos dados fornecidos, podemos realizar algumas análises e construir gráficos, especialmente considerando os aspectos regionais, temporais e financeiros das operações renegociadas. A seguir, detalharei um plano de análise em Python utilizando bibliotecas como pandas e plotly.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -409,7 +413,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./materiais/banco_de_dados"
+            path: "./materiais/python"
         },
         predefinedOutput: true
     }
@@ -427,22 +431,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../index.html"
+       href="index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Materiais</p>
+        <p class="prev-next-title">Python</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../django/index.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Django</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
