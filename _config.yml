@@ -34,3 +34,5 @@ sphinx:
 
 parse:
   myst_extended_syntax: true
+
+theme: jekyll-theme-slate

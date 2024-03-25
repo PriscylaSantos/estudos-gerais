@@ -3,17 +3,28 @@
 ## Priscyla C. Santos
 ![Alt ou título da imagem](imagens/foto65.png)
 
-#### Informações de Contato
+##### Informações de Contato
 - **Telefone/WhatsApp:** (32) 98473-7331
 - **E-mail:** [santospriscyla@gmail.com](mailto:santospriscyla@gmail.com)
-- **LinkedIn:** [@priscylacsantos](http://linkedin.com/in/priscylacsantos)
-- **GitHub:** [@PriscylaSantos](http://github.com/PriscylaSantos)
+
+##### Redes
+- **LinkedIn:** [priscylacsantos](http://linkedin.com/in/priscylacsantos)
+- **GitHub:** [PriscylaSantos](http://github.com/PriscylaSantos)
+- **Kaggle:** [priscylasantos](https://www.kaggle.com/priscylasantos)
+- **Trailblaze**r: [priscylacsantos](https://www.salesforce.com/trailblazer/priscylacsantos)
 
 **Objetivo**: Atuar como desenvolvedora backend (remoto) com foco nas linguagens Python e/ou PHP
 
 
 #### `RESUMO PROFISSIONAL`
-Profissional de Ciência da Computação com mais de 11 anos de experiência em desenvolvimento web, concentrando principalmente nas linguagens Python e PHP. Com Python tenho habilidade com desenvolvimento de APIs utilizando ferramentas  como Django Rest Framework (DRF) e Flask, além de possuir experiência no tratamento de dados eficiente e preciso com Pandas. 
+Graduada em Ciência da Computação, possuo mais de 10 anos de experiência em desenvolvimento web, com 3 anos de expertise em PHP e 7 anos em Python. Ao longo da minha carreira, desenvolvi e implementei diversas aplicações web, utilizando metodologias ágeis e melhores práticas de codificação. 
+
+Minha jornada na área de desenvolvimento de softwares é marcada por experiências em diferentes setores, com foco na criação de soluções personalizadas. Tive a oportunidade de desenvolver softwares para:
+
+- Gestão educacional: Criei sistemas que otimizaram processos administrativos
+- Setor elétrico brasileiro: Atuei no desenvolvimento de softwares que auxiliaram na gestão de usinas, na otimização na geração de energia e na modernização de gestão de contratos de energia.
+
+Atualmente, estou mergulhando nos estudos para aperfeiçoar meus conhecimentos em Analise de Dados e entendendo um pouco mais sobre  Salesforce, ampliando meu conhecimento e habilidades para o futuro.
 
 **Principais competências:** `Python`, `PHP`, `Django`, `Web Service`, `Django REST framework`, `REST`, `SOAP`, `AWS`
 
@@ -29,13 +40,43 @@ Profissional de Ciência da Computação com mais de 11 anos de experiência em 
 
 ###### **studioApp**: Analista de Sistemas Pleno
 > Desenvolvedora back-end: 05/2017 - 12/2024
-- Implementação de endpoints e consumo de APIs da CCEE (SOAP) e BBCE (REST) para consulta de contratos e empresas.
-- Consumo da API do Telegram para envio de mensagens.
-- Tradução de fórmulas do Excel para Python.
-- Desenvolvimento de web scraping para coleta de dados 
-- Utilização do PyJulia para execução de módulos feitos em Julia no Python.
 
-**Principal resultado**: Melhoria no tempo de execução do cálculo do Fator de Indisponibilidade utilizando Pandas vetorizado
+**Frameworks RESTful:**
+- Domínio de frameworks: Proficiência em Django REST Framework e Flask para desenvolvimento de APIs.
+- Integração com bancos de dados: Experiência na integração com SQLAlchemy para manipulação de dados em MySQL e Postgres.
+- Criação de dashboards: Implementação de gráficos interativos em dashboards e aplicações web com Plotly e Apache ECharts.
+
+**Consumo e Integração de APIs:**
+- Consumo de APIs SOAP: Obtenção de dados do setor elétrico via API SOAP.
+- Integração com sistemas: Desenvolvimento de APIs RESTful e integração com sistemas e aplicações existentes em projetos como Volty Trade, Volty Price e Volty Hidro.
+
+**Automação e Agendamento:**
+- Agendamento de tarefas: Implementação de tarefas automatizadas que interagem com o banco de dados e APIs externas para atualização das informações.
+- Gerenciamento de filas: Configuração de filas, enfileiramento de tarefas e monitoramento com Django-RQ (Redis Queue).
+
+**Documentação:**
+- Documentação completa: Criação de documentação completa para API RESTful com endpoints, modelos de dados e exemplos de uso;  utilizando Sphinx para integração com código-fonte.
+
+**AWS:**
+- Gerenciamento de instâncias EC2: Utilização da biblioteca boto3 para criar e gerenciar instâncias EC2.
+- Armazenamento e gerenciamento de arquivos: Experiência em S3 para armazenamento e gerenciamento de arquivos.
+- Gerenciamento de bancos de dados: Administração de bancos de dados RDS na AWS.
+
+**Extração e Análise de Dados:**
+- Web scraping: Extração de dados de sites do setor elétrico (CCEE, ONS, ANEEL, entre outros) em HTML e ASPX.
+- Tratamento de dados: Limpeza, organização e armazenamento de dados em base de dados ou arquivo(.xlsx, .bin, .parquet).
+- Análise avançada: Utilização do Pandas para análise de dados e otimização de cálculos, como vetorização do cálculo do FID (Fator de Disponibilidade).
+
+**Integração com Julia:**
+- Integração avançada: Experiência em integrar o DRF com simulações e modelos estatísticos complexos desenvolvidos em Julia.
+
+**Outras Habilidades:**
+- Proficiência em Python: Sólida base em Python para desenvolvimento de software completo.
+- Experiência em bancos de dados: Conhecimento em MySQL e Postgres.
+- Orientação a resultados: Foco na entrega de soluções eficientes e otimizadas.
+
+**Palavras-chave:**
+`RESTful`, `Django REST Framework`, `Flask`, `SQLAlchemy`, `MySQL`, `Postgres`, `Plotly`, `Apache ECharts`, `API SOAP`, `AWS`, `boto3`, `Django-RQ`, `Pandas`, `web scraping`, `CCEE`, `ONS`, `ANEEL`, `Julia`, `Python`, `bancos de dados`.
 
 ###### **Departamento de Pesquisa e Pós-Graduação**: Bolsista 
 > Desenvolvedora back-end: 05/2016 - 07/2016 
