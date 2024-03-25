@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Serializers no Django Rest Framework &#8212; Meus materiais de estudo</title>
+    <title>2.2.1. Serializers no Django Rest Framework &#8212; Meus materiais de estudo</title>
   
   
   
@@ -61,8 +61,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Linux" href="../linux/index.html" />
-    <link rel="prev" title="Django" href="index.html" />
+    <link rel="next" title="2.3. Linux" href="../linux/index.html" />
+    <link rel="prev" title="2.2. Django" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,19 +178,19 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Sobre</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Materiais</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../banco_de_dados/index.html">Banco de Dados</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Django</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Serializers no Django Rest Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Sobre</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">2. Materiais</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../banco_de_dados/index.html">2.1. Banco de Dados</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">2.2. Django</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">2.2.1. Serializers no Django Rest Framework</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../linux/index.html">Linux</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../linux/comandos_basicos.html">1 - Comandos básicos do Linux</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../linux/index.html">2.3. Linux</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../linux/comandos_basicos.html">2.3.1. 1 - Comandos básicos do Linux</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../python/index.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../python/001_dados_desenrola.html">Uma análise dos dados do Desenrola Brasil</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../python/index.html">2.4. Python</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/001_dados_desenrola.html">2.4.1. Uma análise dos dados do Desenrola Brasil</a></li>
 </ul>
 </li>
 </ul>
@@ -390,15 +390,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcionalidades-essenciais">Funcionalidades Essenciais</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformando-modelos-em-json">Transformando Modelos em JSON</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconstruindo-modelos-a-partir-de-json">Reconstruindo Modelos a partir de JSON</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protegendo-sua-api-contra-dados-invalidos">Protegendo sua API contra dados inválidos</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criando-e-atualizando-instancias">Criando e Atualizando Instâncias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcionalidades-essenciais">2.2.1.1. Funcionalidades Essenciais</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformando-modelos-em-json">2.2.1.1.1. Transformando Modelos em JSON</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconstruindo-modelos-a-partir-de-json">2.2.1.1.2. Reconstruindo Modelos a partir de JSON</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protegendo-sua-api-contra-dados-invalidos">2.2.1.1.3. Protegendo sua API contra dados inválidos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criando-e-atualizando-instancias">2.2.1.1.4. Criando e Atualizando Instâncias</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praticas-recomendadas">Práticas Recomendadas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusao">Conclusão</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praticas-recomendadas">2.2.1.2. Práticas Recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusao">2.2.1.3. Conclusão</a></li>
 </ul>
             </nav>
         </div>
@@ -411,11 +411,11 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="serializers-no-django-rest-framework">
-<h1>Serializers no Django Rest Framework<a class="headerlink" href="#serializers-no-django-rest-framework" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">2.2.1. </span>Serializers no Django Rest Framework<a class="headerlink" href="#serializers-no-django-rest-framework" title="Link to this heading">#</a></h1>
 <p>Serializers são elementos fundamentais no Django Rest Framework (DRF). Eles desempenham um papel crucial na comunicação entre a API e o cliente, formatando dados de modelos Django para JSON, XML ou outros formatos serializados e vice-versa.</p>
 <p>Este texto aprofundado, com base na documentação oficial do DRF, oferece uma compreensão abrangente dos serializers, explorando seus recursos e funcionalidades em detalhes.</p>
 <section id="funcionalidades-essenciais">
-<h2>Funcionalidades Essenciais<a class="headerlink" href="#funcionalidades-essenciais" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.2.1.1. </span>Funcionalidades Essenciais<a class="headerlink" href="#funcionalidades-essenciais" title="Link to this heading">#</a></h2>
 <p>Um serializer no DRF é uma classe que lida com a conversão entre objetos de modelo complexos e tipos de dados Python primitivos, que podem ser facilmente renderizados em JSON, XML ou outros tipos de conteúdo. Os serializers do DRF permitem:</p>
 <ul class="simple">
 <li><p><strong>Serialização:</strong> converte objetos Python em representações serializadas em formatos como JSON, XML ou HTML.</p></li>
@@ -443,7 +443,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="transformando-modelos-em-json">
-<h3>Transformando Modelos em JSON<a class="headerlink" href="#transformando-modelos-em-json" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.2.1.1.1. </span>Transformando Modelos em JSON<a class="headerlink" href="#transformando-modelos-em-json" title="Link to this heading">#</a></h3>
 <p>O processo de serialização converte objetos de modelo em representações JSON. O DRF fornece métodos convenientes para serializar objetos únicos ou conjuntos de objetos.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">serializer</span> <span class="o">=</span> <span class="n">CommentSerializer</span><span class="p">(</span><span class="n">comment</span><span class="p">)</span>
 <span class="n">serializer</span><span class="o">.</span><span class="n">data</span>
@@ -452,7 +452,7 @@ document.write(`
 </div>
 </section>
 <section id="reconstruindo-modelos-a-partir-de-json">
-<h3>Reconstruindo Modelos a partir de JSON<a class="headerlink" href="#reconstruindo-modelos-a-partir-de-json" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.2.1.1.2. </span>Reconstruindo Modelos a partir de JSON<a class="headerlink" href="#reconstruindo-modelos-a-partir-de-json" title="Link to this heading">#</a></h3>
 <p>A desserialização converte dados JSON em objetos de modelo. O DRF permite a criação de novos objetos ou a atualização de objetos existentes através da desserialização.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;foo bar&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="s1">&#39;leila@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;created&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()}</span>
 <span class="n">serializer</span> <span class="o">=</span> <span class="n">CommentSerializer</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
@@ -463,7 +463,7 @@ document.write(`
 </div>
 </section>
 <section id="protegendo-sua-api-contra-dados-invalidos">
-<h3>Protegendo sua API contra dados inválidos<a class="headerlink" href="#protegendo-sua-api-contra-dados-invalidos" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.2.1.1.3. </span>Protegendo sua API contra dados inválidos<a class="headerlink" href="#protegendo-sua-api-contra-dados-invalidos" title="Link to this heading">#</a></h3>
 <p>A validação é crucial para garantir a integridade dos dados. Os serializers do DRF oferecem várias formas de validar dados, incluindo validações a nível de campo e a nível de objeto.</p>
 <ul class="simple">
 <li><p><strong>Validadores de campo:</strong> garantem que cada campo individual atenda aos requisitos específicos.</p></li>
@@ -478,7 +478,7 @@ document.write(`
 </div>
 </section>
 <section id="criando-e-atualizando-instancias">
-<h3>Criando e Atualizando Instâncias<a class="headerlink" href="#criando-e-atualizando-instancias" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">2.2.1.1.4. </span>Criando e Atualizando Instâncias<a class="headerlink" href="#criando-e-atualizando-instancias" title="Link to this heading">#</a></h3>
 <p>Os serializers também lidam com a criação e atualização de instâncias de modelos.
 Serializers fornecem acesso aos dados iniciais recebidos da requisição e à instância do modelo que está sendo serializada ou desserializada.
 Isso permite a implementação de funcionalidades avançadas.</p>
@@ -507,7 +507,7 @@ Isso permite a implementação de funcionalidades avançadas.</p>
 </section>
 </section>
 <section id="praticas-recomendadas">
-<h2>Práticas Recomendadas<a class="headerlink" href="#praticas-recomendadas" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.2.1.2. </span>Práticas Recomendadas<a class="headerlink" href="#praticas-recomendadas" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Uso de ModelSerializer</strong>: Quando possível, use <code class="docutils literal notranslate"><span class="pre">ModelSerializer</span></code> para aproveitar a geração automática de campos e métodos de criação/atualização, o que reduz o código necessário.</p></li>
 <li><p><strong>Validação</strong>: Aproveite as capacidades de validação do DRF para manter a integridade dos dados. Isso inclui validações a nível de campo, a nível de objeto e validadores personalizados.</p></li>
@@ -543,7 +543,7 @@ Isso permite a implementação de funcionalidades avançadas.</p>
 </div>
 </section>
 <section id="conclusao">
-<h2>Conclusão<a class="headerlink" href="#conclusao" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.2.1.3. </span>Conclusão<a class="headerlink" href="#conclusao" title="Link to this heading">#</a></h2>
 <p>Este texto abordou os conceitos básicos e algumas práticas recomendadas para trabalhar com serializers no Django REST Framework. Para um aprofundamento, é altamente recomendável consultar a documentação oficial do DRF, que fornece informações detalhadas e exemplos específicos para diferentes casos de uso.</p>
 <p>Serializers são ferramentas poderosas que facilitam a criação de APIs RESTful robustas e eficientes. Ao dominar os conceitos e funcionalidades dos serializers, você estará pronto para construir APIs que atendem às necessidades específicas do seu projeto.</p>
 <p><strong>Referências</strong></p>
@@ -590,7 +590,7 @@ Isso permite a implementação de funcionalidades avançadas.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Django</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Django</p>
       </div>
     </a>
     <a class="right-next"
@@ -598,7 +598,7 @@ Isso permite a implementação de funcionalidades avançadas.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Linux</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Linux</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -618,15 +618,15 @@ Isso permite a implementação de funcionalidades avançadas.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcionalidades-essenciais">Funcionalidades Essenciais</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformando-modelos-em-json">Transformando Modelos em JSON</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconstruindo-modelos-a-partir-de-json">Reconstruindo Modelos a partir de JSON</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protegendo-sua-api-contra-dados-invalidos">Protegendo sua API contra dados inválidos</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criando-e-atualizando-instancias">Criando e Atualizando Instâncias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcionalidades-essenciais">2.2.1.1. Funcionalidades Essenciais</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformando-modelos-em-json">2.2.1.1.1. Transformando Modelos em JSON</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconstruindo-modelos-a-partir-de-json">2.2.1.1.2. Reconstruindo Modelos a partir de JSON</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protegendo-sua-api-contra-dados-invalidos">2.2.1.1.3. Protegendo sua API contra dados inválidos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criando-e-atualizando-instancias">2.2.1.1.4. Criando e Atualizando Instâncias</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praticas-recomendadas">Práticas Recomendadas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusao">Conclusão</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praticas-recomendadas">2.2.1.2. Práticas Recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusao">2.2.1.3. Conclusão</a></li>
 </ul>
   </nav></div>
 
